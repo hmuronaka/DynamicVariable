@@ -14,7 +14,8 @@
 		D62064581EC5E0BC00FF3F9B /* DynamicVariableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62064571EC5E0BC00FF3F9B /* DynamicVariableManager.swift */; };
 		D620645B1EC5E17600FF3F9B /* Swifter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D620645A1EC5E17600FF3F9B /* Swifter.framework */; };
 		D620645F1EC5E76C00FF3F9B /* umbrella-DynamicVariable.h in Headers */ = {isa = PBXBuildFile; fileRef = D62064501EC5E06500FF3F9B /* umbrella-DynamicVariable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D62064611EC5EC6D00FF3F9B /* GetIfAddr.h in Headers */ = {isa = PBXBuildFile; fileRef = D62064511EC5E09B00FF3F9B /* GetIfAddr.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D62064611EC5EC6D00FF3F9B /* GetIfAddr.h in Headers */ = {isa = PBXBuildFile; fileRef = D62064511EC5E09B00FF3F9B /* GetIfAddr.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D62064881EC5F57000FF3F9B /* DynamicVariableImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62064871EC5F57000FF3F9B /* DynamicVariableImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		D62064571EC5E0BC00FF3F9B /* DynamicVariableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariableManager.swift; path = src/DynamicVariableManager.swift; sourceTree = "<group>"; };
 		D620645A1EC5E17600FF3F9B /* Swifter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swifter.framework; path = Carthage/Build/iOS/Swifter.framework; sourceTree = "<group>"; };
 		D62064601EC5EB4300FF3F9B /* DynamicVariable.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = DynamicVariable.modulemap; sourceTree = "<group>"; };
+		D62064871EC5F57000FF3F9B /* DynamicVariableImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariableImpl.swift; path = src/DynamicVariableImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		D620643F1EC5DC8E00FF3F9B /* src */ = {
 			isa = PBXGroup;
 			children = (
+				D62064871EC5F57000FF3F9B /* DynamicVariableImpl.swift */,
 				D62064571EC5E0BC00FF3F9B /* DynamicVariableManager.swift */,
 				D62064551EC5E0AE00FF3F9B /* DynamicVariable.swift */,
 				D62064511EC5E09B00FF3F9B /* GetIfAddr.h */,
@@ -113,6 +116,7 @@
 			buildConfigurationList = D620643C1EC5DC8600FF3F9B /* Build configuration list for PBXNativeTarget "DynamicVariable" */;
 			buildPhases = (
 				D620642F1EC5DC8600FF3F9B /* Sources */,
+				D62064951EC5F84900FF3F9B /* ShellScript */,
 				D62064301EC5DC8600FF3F9B /* Frameworks */,
 				D62064311EC5DC8600FF3F9B /* Headers */,
 				D62064321EC5DC8600FF3F9B /* Resources */,
@@ -170,11 +174,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D62064951EC5F84900FF3F9B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Swifter.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D620642F1EC5DC8600FF3F9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D62064881EC5F57000FF3F9B /* DynamicVariableImpl.swift in Sources */,
 				D62064541EC5E09B00FF3F9B /* GetIfAddr.m in Sources */,
 				D62064581EC5E0BC00FF3F9B /* DynamicVariableManager.swift in Sources */,
 				D620644B1EC5E00500FF3F9B /* DynamicVariableBinding.swift in Sources */,
@@ -289,6 +311,7 @@
 		D620643D1EC5DC8600FF3F9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -318,6 +341,7 @@
 		D620643E1EC5DC8600FF3F9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;

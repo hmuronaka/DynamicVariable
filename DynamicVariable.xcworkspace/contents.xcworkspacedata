@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:DynamicVariableDemo/DynamicVariableDemo.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:DynamicVariable.xcodeproj">
    </FileRef>
 </Workspace>

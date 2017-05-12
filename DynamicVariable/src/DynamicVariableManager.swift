@@ -38,7 +38,7 @@ public class DynamicVariableManager {
         return DynamicVariable<T>(bridge: any)
     }
     
-    func start(port: UInt16 = 8080) {
+    public func start(port: UInt16 = 8080) {
         if httpServer != nil {
             httpServer.stop()
         }
