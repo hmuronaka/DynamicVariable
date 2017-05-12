@@ -1,7 +1,7 @@
 # DynamicVariable
 
   DynamicVariableは、アプリケーションを実行中に動的に変数の値を変えるためのライブラリです。
-  Http通信により、rubyのswift-dvスクリプトから変数の値を書き換えられます。
+  HTTP通信により、rubyのswift-dvスクリプトから変数の値を書き換えられます。
 
   特にProjectの変更等することなく、簡単に利用できることが特徴です。
 
