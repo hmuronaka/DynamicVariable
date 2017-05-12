@@ -1,0 +1,10 @@
+framework module DynamicVariable {
+    umbrella header "umbrella-DynamicVariable.h"
+    
+    export *
+    module * { export * }
+    
+    explicit module Private {
+        header "GetIfAddr.h"
+    }
+}

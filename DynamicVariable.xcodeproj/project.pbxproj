@@ -1,0 +1,370 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D62064391EC5DC8600FF3F9B /* DynamicVariable.h in Headers */ = {isa = PBXBuildFile; fileRef = D62064371EC5DC8600FF3F9B /* DynamicVariable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D620644B1EC5E00500FF3F9B /* DynamicVariableBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D620644A1EC5E00500FF3F9B /* DynamicVariableBinding.swift */; };
+		D62064541EC5E09B00FF3F9B /* GetIfAddr.m in Sources */ = {isa = PBXBuildFile; fileRef = D62064521EC5E09B00FF3F9B /* GetIfAddr.m */; };
+		D62064561EC5E0AE00FF3F9B /* DynamicVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62064551EC5E0AE00FF3F9B /* DynamicVariable.swift */; };
+		D62064581EC5E0BC00FF3F9B /* DynamicVariableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62064571EC5E0BC00FF3F9B /* DynamicVariableManager.swift */; };
+		D620645B1EC5E17600FF3F9B /* Swifter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D620645A1EC5E17600FF3F9B /* Swifter.framework */; };
+		D620645F1EC5E76C00FF3F9B /* umbrella-DynamicVariable.h in Headers */ = {isa = PBXBuildFile; fileRef = D62064501EC5E06500FF3F9B /* umbrella-DynamicVariable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D62064611EC5EC6D00FF3F9B /* GetIfAddr.h in Headers */ = {isa = PBXBuildFile; fileRef = D62064511EC5E09B00FF3F9B /* GetIfAddr.h */; settings = {ATTRIBUTES = (Private, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D62064341EC5DC8600FF3F9B /* DynamicVariable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicVariable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D62064371EC5DC8600FF3F9B /* DynamicVariable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicVariable.h; sourceTree = "<group>"; };
+		D62064381EC5DC8600FF3F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D620644A1EC5E00500FF3F9B /* DynamicVariableBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariableBinding.swift; path = src/DynamicVariableBinding.swift; sourceTree = "<group>"; };
+		D62064501EC5E06500FF3F9B /* umbrella-DynamicVariable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "umbrella-DynamicVariable.h"; sourceTree = "<group>"; };
+		D62064511EC5E09B00FF3F9B /* GetIfAddr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetIfAddr.h; path = src/GetIfAddr.h; sourceTree = "<group>"; };
+		D62064521EC5E09B00FF3F9B /* GetIfAddr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetIfAddr.m; path = src/GetIfAddr.m; sourceTree = "<group>"; };
+		D62064551EC5E0AE00FF3F9B /* DynamicVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariable.swift; path = src/DynamicVariable.swift; sourceTree = "<group>"; };
+		D62064571EC5E0BC00FF3F9B /* DynamicVariableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariableManager.swift; path = src/DynamicVariableManager.swift; sourceTree = "<group>"; };
+		D620645A1EC5E17600FF3F9B /* Swifter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swifter.framework; path = Carthage/Build/iOS/Swifter.framework; sourceTree = "<group>"; };
+		D62064601EC5EB4300FF3F9B /* DynamicVariable.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = DynamicVariable.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D62064301EC5DC8600FF3F9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D620645B1EC5E17600FF3F9B /* Swifter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D620642A1EC5DC8600FF3F9B = {
+			isa = PBXGroup;
+			children = (
+				D62064361EC5DC8600FF3F9B /* DynamicVariable */,
+				D62064351EC5DC8600FF3F9B /* Products */,
+				D62064591EC5E17600FF3F9B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D62064351EC5DC8600FF3F9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D62064341EC5DC8600FF3F9B /* DynamicVariable.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D62064361EC5DC8600FF3F9B /* DynamicVariable */ = {
+			isa = PBXGroup;
+			children = (
+				D620643F1EC5DC8E00FF3F9B /* src */,
+				D62064371EC5DC8600FF3F9B /* DynamicVariable.h */,
+				D62064381EC5DC8600FF3F9B /* Info.plist */,
+				D62064501EC5E06500FF3F9B /* umbrella-DynamicVariable.h */,
+				D62064601EC5EB4300FF3F9B /* DynamicVariable.modulemap */,
+			);
+			path = DynamicVariable;
+			sourceTree = "<group>";
+		};
+		D620643F1EC5DC8E00FF3F9B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D62064571EC5E0BC00FF3F9B /* DynamicVariableManager.swift */,
+				D62064551EC5E0AE00FF3F9B /* DynamicVariable.swift */,
+				D62064511EC5E09B00FF3F9B /* GetIfAddr.h */,
+				D62064521EC5E09B00FF3F9B /* GetIfAddr.m */,
+				D620644A1EC5E00500FF3F9B /* DynamicVariableBinding.swift */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		D62064591EC5E17600FF3F9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D620645A1EC5E17600FF3F9B /* Swifter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D62064311EC5DC8600FF3F9B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D62064391EC5DC8600FF3F9B /* DynamicVariable.h in Headers */,
+				D620645F1EC5E76C00FF3F9B /* umbrella-DynamicVariable.h in Headers */,
+				D62064611EC5EC6D00FF3F9B /* GetIfAddr.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D62064331EC5DC8600FF3F9B /* DynamicVariable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D620643C1EC5DC8600FF3F9B /* Build configuration list for PBXNativeTarget "DynamicVariable" */;
+			buildPhases = (
+				D620642F1EC5DC8600FF3F9B /* Sources */,
+				D62064301EC5DC8600FF3F9B /* Frameworks */,
+				D62064311EC5DC8600FF3F9B /* Headers */,
+				D62064321EC5DC8600FF3F9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamicVariable;
+			productName = DynamicVariable;
+			productReference = D62064341EC5DC8600FF3F9B /* DynamicVariable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D620642B1EC5DC8600FF3F9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Muronaka Hiroaki";
+				TargetAttributes = {
+					D62064331EC5DC8600FF3F9B = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = C3BE3ZYRWA;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D620642E1EC5DC8600FF3F9B /* Build configuration list for PBXProject "DynamicVariable" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D620642A1EC5DC8600FF3F9B;
+			productRefGroup = D62064351EC5DC8600FF3F9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D62064331EC5DC8600FF3F9B /* DynamicVariable */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D62064321EC5DC8600FF3F9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D620642F1EC5DC8600FF3F9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D62064541EC5E09B00FF3F9B /* GetIfAddr.m in Sources */,
+				D62064581EC5E0BC00FF3F9B /* DynamicVariableManager.swift in Sources */,
+				D620644B1EC5E00500FF3F9B /* DynamicVariableBinding.swift in Sources */,
+				D62064561EC5E0AE00FF3F9B /* DynamicVariable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D620643A1EC5DC8600FF3F9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D620643B1EC5DC8600FF3F9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D620643D1EC5DC8600FF3F9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C3BE3ZYRWA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/DynamicVariable/src";
+				INFOPLIST_FILE = DynamicVariable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "$(SRCROOT)/DynamicVariable/DynamicVariable.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = hmuronaka.DynamicVariable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/DynamicVariable/src/";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D620643E1EC5DC8600FF3F9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C3BE3ZYRWA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/DynamicVariable/src";
+				INFOPLIST_FILE = DynamicVariable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "$(SRCROOT)/DynamicVariable/DynamicVariable.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = hmuronaka.DynamicVariable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/DynamicVariable/src/";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D620642E1EC5DC8600FF3F9B /* Build configuration list for PBXProject "DynamicVariable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D620643A1EC5DC8600FF3F9B /* Debug */,
+				D620643B1EC5DC8600FF3F9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D620643C1EC5DC8600FF3F9B /* Build configuration list for PBXNativeTarget "DynamicVariable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D620643D1EC5DC8600FF3F9B /* Debug */,
+				D620643E1EC5DC8600FF3F9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D620642B1EC5DC8600FF3F9B /* Project object */;
+}
