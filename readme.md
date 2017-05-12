@@ -5,6 +5,8 @@
 
   特にProjectの変更等することなく、簡単に利用できることが特徴です。
 
+![dynamic_variable.gif](screenshots/dynamic_variable.gif)
+
 * 使い方
 
 ```swift
