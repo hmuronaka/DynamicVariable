@@ -12,23 +12,7 @@
 		D62064741EC5F3CC00FF3F9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62064721EC5F3CC00FF3F9B /* Main.storyboard */; };
 		D62064761EC5F3CC00FF3F9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62064751EC5F3CC00FF3F9B /* Assets.xcassets */; };
 		D62064791EC5F3CC00FF3F9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62064771EC5F3CC00FF3F9B /* LaunchScreen.storyboard */; };
-		D62064931EC5F82A00FF3F9B /* DynamicVariable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62064851EC5F4E900FF3F9B /* DynamicVariable.framework */; };
-		D62064941EC5F82A00FF3F9B /* DynamicVariable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D62064851EC5F4E900FF3F9B /* DynamicVariable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		D62064921EC5F82500FF3F9B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				D62064941EC5F82A00FF3F9B /* DynamicVariable.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D620646B1EC5F3CC00FF3F9B /* DynamicVariableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicVariableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,7 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D62064931EC5F82A00FF3F9B /* DynamicVariable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +86,6 @@
 				D62064671EC5F3CC00FF3F9B /* Sources */,
 				D62064681EC5F3CC00FF3F9B /* Frameworks */,
 				D62064691EC5F3CC00FF3F9B /* Resources */,
-				D62064921EC5F82500FF3F9B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -334,6 +316,7 @@
 				D620647F1EC5F3CC00FF3F9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
