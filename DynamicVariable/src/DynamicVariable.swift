@@ -13,17 +13,6 @@ public class AnyDynamicVariable {
     var callback:((String) -> ())?
     var any: Any
     
-//    var currentValue: Any {
-//        set(newValue) {
-//            let ud = UserDefaults(suiteName: "DynamicVariable")
-//            ud?.set(newValue, forKey: name)
-//        }
-//        get {
-//            let ud = UserDefaults(suiteName: "DynamicVariable")
-//            return ud?.object(forKey: name) ?? defaultValue
-//        }
-//    }
-     
     public init(any: Any, callback:@escaping (String) -> ()) {
         self.any = any
         self.callback = callback
