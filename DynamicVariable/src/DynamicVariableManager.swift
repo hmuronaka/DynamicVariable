@@ -32,10 +32,10 @@ public class DynamicVariableManager {
     }
     
     func get<T>(name: String) -> DynamicVariable<T>? {
-        guard let any = dictionary[name] else {
+        guard let dv = dictionary[name] else {
             return nil
         }
-        return DynamicVariable<T>(bridge: any)
+        return dv.get()
     }
     
     public func start(port: UInt16 = 8080) {
@@ -57,9 +57,7 @@ public class DynamicVariableManager {
                     guard let dynamicVariable = self.dictionary[name] else {
                         return
                     }
-                    let any = dynamicVariable.converter(value)
-                    dynamicVariable.currentValue = any
-                    dynamicVariable.callback?(any)
+                    dynamicVariable.fireCallback(string: value)
                 }
             } catch {
                 self.errorHandler?(error)

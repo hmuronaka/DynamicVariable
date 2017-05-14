@@ -10,6 +10,8 @@ import UIKit
 public protocol DynamicVariableBinding  {
     init?(string: String)
     func dv_bind(name: String, block: ((Self) -> ())?) -> Self
+    func dv_forUserDefaults() -> Any
+    static func dv_fromUserDefaults(any: Any) -> Self?
 }
 
 public extension DynamicVariableBinding {
@@ -23,6 +25,14 @@ public extension DynamicVariableBinding {
         }
         // 現在値を返す
         return dynamicVariable.currentValue
+    }
+    
+    public func dv_forUserDefaults() -> Any {
+        return self
+    }
+    
+    static public func dv_fromUserDefaults(any: Any) -> Self? {
+        return  any as? Self
     }
     
 }

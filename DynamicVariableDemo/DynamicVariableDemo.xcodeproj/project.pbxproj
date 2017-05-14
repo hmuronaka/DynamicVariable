@@ -24,6 +24,8 @@
 		D620647A1EC5F3CC00FF3F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D62064851EC5F4E900FF3F9B /* DynamicVariable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DynamicVariable.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/DynamicVariable-eggcilgatpfpdvburrsmssqleexi/Build/Products/Debug-iphonesimulator/DynamicVariable.framework"; sourceTree = "<group>"; };
 		D620648A1EC5F64100FF3F9B /* Swifter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swifter.framework; path = ../Carthage/Build/iOS/Swifter.framework; sourceTree = "<group>"; };
+		D6ED26FB1EC70C89001BA83E /* DynamicVariable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DynamicVariable.framework; path = ../../DynamicDemoTest/Carthage/Build/iOS/DynamicVariable.framework; sourceTree = "<group>"; };
+		D6ED26FD1EC70C8C001BA83E /* Swifter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swifter.framework; path = ../../DynamicDemoTest/Carthage/Build/iOS/Swifter.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,8 @@
 		D62064841EC5F4E900FF3F9B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6ED26FD1EC70C8C001BA83E /* Swifter.framework */,
+				D6ED26FB1EC70C89001BA83E /* DynamicVariable.framework */,
 				D620648A1EC5F64100FF3F9B /* Swifter.framework */,
 				D62064851EC5F4E900FF3F9B /* DynamicVariable.framework */,
 			);

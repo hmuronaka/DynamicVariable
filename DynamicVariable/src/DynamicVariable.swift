@@ -10,41 +10,37 @@ import UIKit
 
 public class AnyDynamicVariable {
     
-    var name: String
-    var defaultValue: Any
-    var converter: ((String) -> (Any))
-    var callback: ((Any) -> ())?
+    var callback:((String) -> ())?
+    var any: Any
     
-    var currentValue: Any {
-        set(newValue) {
-            let ud = UserDefaults(suiteName: "DynamicVariable")
-            ud?.set(newValue, forKey: name)
-        }
-        get {
-            let ud = UserDefaults(suiteName: "DynamicVariable")
-            return ud?.object(forKey: name) ?? defaultValue
-        }
-    }
+//    var currentValue: Any {
+//        set(newValue) {
+//            let ud = UserDefaults(suiteName: "DynamicVariable")
+//            ud?.set(newValue, forKey: name)
+//        }
+//        get {
+//            let ud = UserDefaults(suiteName: "DynamicVariable")
+//            return ud?.object(forKey: name) ?? defaultValue
+//        }
+//    }
      
-    public init(name: String, defaultValue: Any, converter: @escaping (String) ->(Any), callback: ((Any) ->())?) {
-        self.name = name
-        self.defaultValue = defaultValue
-        self.converter = converter
+    public init(any: Any, callback:@escaping (String) -> ()) {
+        self.any = any
         self.callback = callback
     }
     
     public convenience init<T: DynamicVariableBinding>(bridge: DynamicVariable<T>) {
-        self.init(name: bridge.name, defaultValue: bridge.defaultValue, converter: { (str) -> (Any) in
-            return T(string: str)!
-        }) { value -> () in
-            bridge.callback?(value as! T)
+        self.init(any: bridge) { str -> () in
+            bridge.fireCallback(string: str)
         }
     }
     
-    public func value(from string: String) {
-        self.currentValue = string
+    public func fireCallback(string: String) {
         self.callback?(string)
-        
+    }
+    
+    public func get<T>() -> DynamicVariable<T>? {
+        return any as? DynamicVariable<T>
     }
     
 }
@@ -59,11 +55,14 @@ public class DynamicVariable<T: DynamicVariableBinding> {
     var currentValue: T {
         set(newValue) {
             let ud = UserDefaults(suiteName: "DynamicVariable")
-            ud?.set(newValue, forKey: name)
+            ud?.set(newValue.dv_forUserDefaults(), forKey: name)
         }
         get {
             let ud = UserDefaults(suiteName: "DynamicVariable")
-            return ud?.object(forKey: name) as? T ?? defaultValue
+            guard let any = ud?.object(forKey: name), let value = T.dv_fromUserDefaults(any: any) else {
+                return defaultValue
+            }
+            return value
         }
     }
     
@@ -75,10 +74,10 @@ public class DynamicVariable<T: DynamicVariableBinding> {
         self.callback = callback
     }
     
-    public convenience init(bridge: AnyDynamicVariable) {
-        self.init(name: bridge.name, defaultValue: bridge.defaultValue as! T, callback: { (val:T) -> () in
-            bridge.callback?(val)
-        })
+    public func fireCallback(string: String) {
+        let newValue = T(string: string)!
+        self.currentValue = newValue
+        self.callback?(self.currentValue)
     }
 }
     

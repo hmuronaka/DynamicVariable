@@ -16,6 +16,8 @@
 		D620645F1EC5E76C00FF3F9B /* umbrella-DynamicVariable.h in Headers */ = {isa = PBXBuildFile; fileRef = D62064501EC5E06500FF3F9B /* umbrella-DynamicVariable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D62064611EC5EC6D00FF3F9B /* GetIfAddr.h in Headers */ = {isa = PBXBuildFile; fileRef = D62064511EC5E09B00FF3F9B /* GetIfAddr.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D62064881EC5F57000FF3F9B /* DynamicVariableImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62064871EC5F57000FF3F9B /* DynamicVariableImpl.swift */; };
+		D6ED270C1EC7228E001BA83E /* NSTextCheckingResult+DynamicVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ED270B1EC7228E001BA83E /* NSTextCheckingResult+DynamicVariable.swift */; };
+		D6ED27101EC72686001BA83E /* String+DynamicVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ED270F1EC72686001BA83E /* String+DynamicVariable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		D620645A1EC5E17600FF3F9B /* Swifter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swifter.framework; path = Carthage/Build/iOS/Swifter.framework; sourceTree = "<group>"; };
 		D62064601EC5EB4300FF3F9B /* DynamicVariable.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = DynamicVariable.modulemap; sourceTree = "<group>"; };
 		D62064871EC5F57000FF3F9B /* DynamicVariableImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariableImpl.swift; path = src/DynamicVariableImpl.swift; sourceTree = "<group>"; };
+		D6ED270B1EC7228E001BA83E /* NSTextCheckingResult+DynamicVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSTextCheckingResult+DynamicVariable.swift"; path = "src/NSTextCheckingResult+DynamicVariable.swift"; sourceTree = "<group>"; };
+		D6ED270F1EC72686001BA83E /* String+DynamicVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+DynamicVariable.swift"; path = "src/String+DynamicVariable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				D62064511EC5E09B00FF3F9B /* GetIfAddr.h */,
 				D62064521EC5E09B00FF3F9B /* GetIfAddr.m */,
 				D620644A1EC5E00500FF3F9B /* DynamicVariableBinding.swift */,
+				D6ED270B1EC7228E001BA83E /* NSTextCheckingResult+DynamicVariable.swift */,
+				D6ED270F1EC72686001BA83E /* String+DynamicVariable.swift */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -200,6 +206,8 @@
 				D62064541EC5E09B00FF3F9B /* GetIfAddr.m in Sources */,
 				D62064581EC5E0BC00FF3F9B /* DynamicVariableManager.swift in Sources */,
 				D620644B1EC5E00500FF3F9B /* DynamicVariableBinding.swift in Sources */,
+				D6ED270C1EC7228E001BA83E /* NSTextCheckingResult+DynamicVariable.swift in Sources */,
+				D6ED27101EC72686001BA83E /* String+DynamicVariable.swift in Sources */,
 				D62064561EC5E0AE00FF3F9B /* DynamicVariable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
