@@ -33,7 +33,6 @@ class ViewController: UIViewController {
         	}
 
 	        label.text = "\(val)"
-        	label.textColor = .black
         	labelString.text = "Text".dv_bind(name: "text", block: { (newValue) in
             		self.labelString.text = newValue
         	})
