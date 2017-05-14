@@ -37,8 +37,9 @@ extension String: DynamicVariableBinding {
 //"w: 123, h:345"
 extension CGSize: DynamicVariableBinding {
     public init?(string: String) {
-        let pattern = "^\\s*(?:w:|width:)?\\s*([-]?\\d+)\\s*,\\s*(?:h:|height:)?\\s*([-]?\\d+)\\s*$"
-        guard let match = string.dv_match(pattern: pattern), match.numberOfRanges == 3 else {
+//        let pattern = "^\\s*(?:w:|width:)?\\s*([-]?\\d+)\\s*,\\s*(?:h:|height:)?\\s*([-]?\\d+)\\s*$"
+        let patterns = [("w|width", "[-]?\\d+"), ("h|height", "[-]?\\d+")]
+        guard let match = string.dv_match(patterns:patterns), match.numberOfRanges == 3 else {
             return nil
         }
         
@@ -62,8 +63,9 @@ extension CGSize: DynamicVariableBinding {
 //"x: 123, y: 345"
 extension CGPoint: DynamicVariableBinding {
     public init?(string: String) {
-        let pattern = "^\\s*(?:x:)?\\s*([-]?\\d+)\\s*,\\s*(?:h:)?\\s*([-]?\\d+)\\s*$"
-        guard let match = string.dv_match(pattern: pattern), match.numberOfRanges == 3 else {
+//        let pattern = "^\\s*(?:x:)?\\s*([-]?\\d+)\\s*,\\s*(?:h:)?\\s*([-]?\\d+)\\s*$"
+        let patterns = [("x", "[-]?\\d+"), ("y", "[-]?\\d+")]
+        guard let match = string.dv_match(patterns: patterns), match.numberOfRanges == 3 else {
             return nil
         }
         

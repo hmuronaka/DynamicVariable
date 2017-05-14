@@ -43,4 +43,15 @@ internal extension String {
         
         return regex.firstMatch(in: self, options: [], range: self.dv_nsrange())
     }
+    
+    func dv_match(patterns: [(String,String)]) -> NSTextCheckingResult? {
+        var mainPatterns = [String]()
+        for (name,value) in patterns {
+            let pattern = "\\s*(?:(?:\(name)):)?\\s*(\(value))\\s*"
+            mainPatterns.append(pattern)
+        }
+        let pattern = "^\(mainPatterns.joined(separator: ","))$"
+        return dv_match(pattern: pattern)
+    }
+    
 }
