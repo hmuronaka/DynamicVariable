@@ -64,7 +64,9 @@ public class DynamicVariable<T: DynamicVariableBinding> {
     }
     
     public func fireCallback(string: String) {
-        let newValue = T(string: string)!
+        guard let newValue = T(string: string) else {
+            return 
+        }
         self.currentValue = newValue
         self.callback?(self.currentValue)
     }

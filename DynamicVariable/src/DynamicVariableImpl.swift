@@ -37,15 +37,8 @@ extension String: DynamicVariableBinding {
 //"w: 123, h:345"
 extension CGSize: DynamicVariableBinding {
     public init?(string: String) {
-        let tryRegEx = try? NSRegularExpression(pattern: "^\\s*(?:w:|width:)?\\s*([-]?\\d+)\\s*,\\s*(?:h:|height:)?\\s*([-]?\\d+)\\s*$", options: .caseInsensitive)
-        guard let regex = tryRegEx else {
-            return nil
-        }
-        
-        print("dv_nsrange: \(string.dv_nsrange().location), \(string.dv_nsrange().length)")
-        let match:NSTextCheckingResult! = regex.firstMatch(in: string, options: [], range: string.dv_nsrange())
-        
-        guard match != nil && match.numberOfRanges == 3 else {
+        let pattern = "^\\s*(?:w:|width:)?\\s*([-]?\\d+)\\s*,\\s*(?:h:|height:)?\\s*([-]?\\d+)\\s*$"
+        guard let match = string.dv_match(pattern: pattern), match.numberOfRanges == 3 else {
             return nil
         }
         
@@ -62,5 +55,30 @@ extension CGSize: DynamicVariableBinding {
     
     static public func dv_fromUserDefaults(any: Any) -> CGSize? {
         return CGSizeFromString(any as! String)
+    }
+}
+
+//"123, 345"
+//"x: 123, y: 345"
+extension CGPoint: DynamicVariableBinding {
+    public init?(string: String) {
+        let pattern = "^\\s*(?:x:)?\\s*([-]?\\d+)\\s*,\\s*(?:h:)?\\s*([-]?\\d+)\\s*$"
+        guard let match = string.dv_match(pattern: pattern), match.numberOfRanges == 3 else {
+            return nil
+        }
+        
+        guard let x = match.dv_capturingGroup(at: 1, source: string)?.dv_toCGFloat(),
+            let y = match.dv_capturingGroup(at: 2, source: string)?.dv_toCGFloat() else {
+            return nil
+        }
+        self.init(x: x, y: y)
+    }
+    
+    public func dv_forUserDefaults() -> Any {
+        return NSStringFromCGPoint(self)
+    }
+    
+    static public func dv_fromUserDefaults(any: Any) -> CGPoint? {
+        return CGPointFromString(any as! String)
     }
 }

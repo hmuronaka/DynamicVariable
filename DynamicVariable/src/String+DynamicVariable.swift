@@ -34,4 +34,13 @@ internal extension String {
         }
         return CGFloat(value)
     }
+    
+    func dv_match(pattern: String) -> NSTextCheckingResult? {
+        let tryRegEx = try? NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+        guard let regex = tryRegEx else {
+            return nil
+        }
+        
+        return regex.firstMatch(in: self, options: [], range: self.dv_nsrange())
+    }
 }
